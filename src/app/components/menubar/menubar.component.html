@@ -1,0 +1,21 @@
+<button mat-button color="warn" 
+  routerLink="/home"  routerLinkActive="active"
+  style="font-size: 16px; font-weight: bold;"
+  >
+    <mat-icon>home</mat-icon>Accueil
+</button>
+
+<button mat-icon-button [matMenuTriggerFor]="menu" 
+  #menuTrigger="matMenuTrigger" 
+  (mouseover)="menuTrigger.openMenu()" color="warn"
+  style="font-size: 16px; font-weight: bold;">
+  Expérimentation
+</button>
+<mat-menu #menu="matMenu" [overlapTrigger]="false">
+<span (mouseleave)="menuTrigger.closeMenu()">
+  <button mat-menu-item routerLink="/deployed-model">Querying deployed model (GCP)</button>
+  <button mat-menu-item routerLink="/chat-model">Bard (GCP)</button>
+  <button mat-menu-item routerLink="/aws-search">App builder - Semantic search (AWS)</button>
+</span>
+</mat-menu>
+

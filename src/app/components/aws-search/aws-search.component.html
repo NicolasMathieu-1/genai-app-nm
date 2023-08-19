@@ -1,0 +1,72 @@
+<menubar></menubar>
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>online_prediction</mat-icon>
+    </button>
+    <span class="header-spacer">        
+        AWS - Semantic search on Docuemnts / Image / file contents
+    </span>
+</mat-toolbar>
+<br>
+<br>
+<table align="center" width="80%">
+    <tr>
+       <td>
+           <mat-stepper #stepper>
+               <mat-step [stepControl]="chatFormGroup">
+               <form [formGroup]="chatFormGroup">
+                   <ng-template matStepLabel>Your query ?</ng-template>
+                   <mat-form-field>
+                   <mat-label>Question</mat-label>
+                   <input matInput placeholder="Question ?" formControlName="questionCtl" style="width: 500px;" required>
+                   </mat-form-field>
+                   <div>                    
+                   <button mat-flat-button color="warn" matStepperNext (click)="askQuestion()">Next</button>
+                   </div>
+               </form>
+               </mat-step>
+               <mat-step>
+                <form [formGroup]="chatFormGroup">
+                    <div>
+                        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort style="width: 80%;">
+                            <ng-container matColumnDef="document_uri">
+                                <th mat-header-cell *matHeaderCellDef  mat-sort-header>URI</th>
+                                <td mat-cell *matCellDef="let element" class="multiline-textfields"><a href="{{element.document_uri}}"> {{element.document_uri}}</a></td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="document_title">
+                              <th mat-header-cell *matHeaderCellDef  mat-sort-header>Document Title</th>
+                              <td mat-cell *matCellDef="let element" class="multiline-textfields"> {{element.document_title}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="document_text">
+                                <th mat-header-cell *matHeaderCellDef  mat-sort-header>Document Text</th>
+                                <td mat-cell *matCellDef="let element" class="multiline-textfields"> {{element.document_text}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="answer_text">
+                                <th mat-header-cell *matHeaderCellDef  mat-sort-header>Answer Text</th>
+                                <td mat-cell *matCellDef="let element" class="multiline-textfields"> {{element.answer_text}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="type">
+                                <th mat-header-cell *matHeaderCellDef  mat-sort-header>Type</th>
+                                <td mat-cell *matCellDef="let element" class="multiline-textfields"> {{element.type}} </td>
+                            </ng-container>
+                            
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                            <mat-paginator [pageSizeOptions]="[20, 50, 100]" showFirstLastButtons>
+                            </mat-paginator>
+                          </table>    
+
+                    </div>
+                
+                    <br><br>
+                    <div>
+                        <button mat-flat-button color="warn" matStepperPrevious>Back</button>&nbsp;
+                        <button mat-flat-button color="warn" (click)="stepper.reset()">Reset</button>
+                    </div>
+                </form>
+               </mat-step>

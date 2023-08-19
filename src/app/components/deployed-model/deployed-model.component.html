@@ -1,0 +1,43 @@
+<menubar></menubar>
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>online_prediction</mat-icon>
+    </button>
+    <span class="header-spacer">        
+        For this POC, a model is deployed on the subjet Eviden. Let's chat!
+    </span>
+</mat-toolbar>
+<table align="center" width="60%">
+ <tr>
+    <td>
+        <mat-stepper #stepper>
+            <mat-step [stepControl]="firstFormGroup">
+            <form [formGroup]="firstFormGroup">
+                <ng-template matStepLabel>Your query ?</ng-template>
+                <mat-form-field>
+                <mat-label>Question</mat-label>
+                <input matInput placeholder="Question ?" formControlName="questionCtl" style="width: 500px;" required>
+                </mat-form-field>
+                <div>                    
+                <button mat-flat-button color="warn" matStepperNext (click)="askQuestion()">Next</button>
+                </div>
+            </form>
+            </mat-step>
+            <mat-step>
+            
+                <div class="multiline-textfields">
+                    {{ val }}
+                </div>                
+            
+            <br><br>
+            <div>
+                <button mat-flat-button color="warn" matStepperPrevious>Back</button>&nbsp;
+                <button mat-flat-button color="warn" (click)="stepper.reset()">Reset</button>
+            </div>
+            </mat-step>
+        </mat-stepper>
+    </td>
+  </tr>
+</table>    
+<br><br><br><br><br><br><br><br><br><br>
+<footer></footer>

@@ -1,0 +1,85 @@
+<menubar></menubar>
+<mat-toolbar>
+    <span class="header-spacer"></span>
+</mat-toolbar>
+<br>
+<table align="center" width="75%">
+    <tr>
+        <td>
+            <mat-accordion>
+                <mat-expansion-panel (opened)="promptOpenState = true"
+                                    (closed)="promptOpenState = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                    Deployed model
+                    </mat-panel-title>
+                    <mat-panel-description>
+                    Querying on deployed model - by GCP Gen AI LLM
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p>                    
+                    A sample model named Eviden is deployed based on the available information ingested from the site.
+                    You can ask question and it will try to answer!
+                </p>    
+                    
+
+                    <a routerLink="/deployed-model"  routerLinkActive="active">
+                        <button mat-flat-button color="warn">Checkout</button>
+                    </a>
+                </mat-expansion-panel>
+
+
+                
+                <mat-expansion-panel (opened)="bardOpenState = true"
+                                    (closed)="bardOpenState = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Bard
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Conversational AI
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p>                    
+                    Meet Bard: your creative and helpful collaborator, here to supercharge your imagination, boost your productivity, and bring your ideas to life.
+                </p>
+                    <a routerLink="/chat-model"  routerLinkActive="active">
+                        <button mat-flat-button color="warn">Checkout</button>
+                    </a>
+                
+                </mat-expansion-panel>
+
+                <mat-expansion-panel (opened)="appAwsAiSearchOpenState = true"
+                                    (closed)="appAwsAiSearchOpenState = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        App builder
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Semantic search by AI by AWS
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                
+                  <ul>
+                    <li>Quickly implement a unified search experience across multiple structured and unstructured content repositories.</li>
+
+                    <li>Use natural language processing (NLP) to get highly accurate answers without the need for machine learning (ML) expertise.</li>
+
+                    <li>Fine-tune your search results based on content attributes, freshness, user behavior, and more.</li>
+
+                    <li>Deliver ML-powered instant answers, FAQs, and document ranking as a fully managed service.</li>
+                   </ul>    
+                
+                    <a routerLink="/aws-search"  routerLinkActive="active">
+                        <button mat-flat-button color="warn">Checkout</button>
+                    </a>
+                
+                </mat-expansion-panel>
+
+                
+            </mat-accordion>
+        </td>
+    </tr>
+</table>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<footer></footer>
