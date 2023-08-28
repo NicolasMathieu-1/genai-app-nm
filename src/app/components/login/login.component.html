@@ -1,24 +1,27 @@
 <div class="align-center">
-    <h2>User Login</h2>
-    <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
-      <input
-        placeholder="Email Id"
-        type="text"
-        name="email"
-        [(ngModel)]="user.email"
-      />
-      <input
-        placeholder="Password"
-        type="password"
-        name="password"
-        [(ngModel)]="user.password"
-      />
-      <div class="btn-div">
-        <button type="submit" [disabled]="!myForm.valid" class="login-btn">
-          Login
-        </button>
-      </div>
-    </form>
-  </div>
+      
+      <div
+        id="g_id_onload"
+        data-client_id="12959087622-87a52lcc79nsgmg8gakq2i416hur8rk5.apps.googleusercontent.com"
+        data-context="use"
+        data-ux_mode="popup"
+        data-itp_support="true"
+        data-callback="handleCredentialResponse"
+      ></div>
+      <!-- data-auto-select="true" -->
+      <div
+        class="g_id_signin"
+        data-type="standard"
+        data-shape="pill"
+        data-theme="filled_blue"
+        data-text="signin_with"
+        data-size="large"
+        data-logo_alignment="left"
+      ></div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <br>
 <footer></footer>

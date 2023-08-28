@@ -39,7 +39,8 @@ import { DeployedModelComponent } from './components/deployed-model/deployed-mod
 import { MatStepperModule } from '@angular/material/stepper';
 import { ConversationModelComponent } from './components/conversation-model/conversation-model.component';
 import { AwsSearchComponent } from './components/aws-search/aws-search.component';
-
+import { ErrorComponent } from './components/error/error.component';
+import { UserCardComponent } from './components/user-card/user-card.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,9 @@ import { AwsSearchComponent } from './components/aws-search/aws-search.component
     FooterComponent,
     DeployedModelComponent,
     ConversationModelComponent,
-    AwsSearchComponent
+    AwsSearchComponent,
+    ErrorComponent,
+    UserCardComponent
   ],
   imports: [
     BrowserModule,

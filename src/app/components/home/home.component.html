@@ -1,6 +1,9 @@
 <menubar></menubar>
 <mat-toolbar>
     <span class="header-spacer"></span>
+    <ng-container *ngIf="userProfile">
+        <div>Welcome, {{ userProfile.name }}</div>
+    </ng-container>
 </mat-toolbar>
 <br>
 <table align="center" width="75%">
