@@ -41,6 +41,10 @@ import { ConversationModelComponent } from './components/conversation-model/conv
 import { AwsSearchComponent } from './components/aws-search/aws-search.component';
 import { ErrorComponent } from './components/error/error.component';
 import { UserCardComponent } from './components/user-card/user-card.component';
+import { SkillsearchComponent } from './components/skillsearch/skillsearch.component';
+import { JobprofileComponent } from './components/jobprofile/jobprofile.component';
+import { PerfanalysisComponent } from './components/perfanalysis/perfanalysis.component';
+import { TrainingsuggestionComponent } from './components/trainingsuggestion/trainingsuggestion.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +58,11 @@ import { UserCardComponent } from './components/user-card/user-card.component';
     ConversationModelComponent,
     AwsSearchComponent,
     ErrorComponent,
-    UserCardComponent
+    UserCardComponent,
+    SkillsearchComponent,
+    JobprofileComponent,
+    PerfanalysisComponent,
+    TrainingsuggestionComponent
   ],
   imports: [
     BrowserModule,

@@ -30,7 +30,7 @@ export class DeployedModelComponent {
 
     this.commonService.getData(url).subscribe(
       {
-        next: (resp) =>  this.val = resp.toString(),
+        next: (resp) => this.val=resp.toString(),
         error: (err) => console.log(err),
         complete: () => console.log("completed.")
       }

@@ -5,14 +5,19 @@ import { HomeComponent } from './components/home/home.component';
 import { DeployedModelComponent } from './components/deployed-model/deployed-model.component';
 import { ConversationModelComponent } from './components/conversation-model/conversation-model.component';
 import { AwsSearchComponent } from './components/aws-search/aws-search.component';
+import { SkillsearchComponent } from './components/skillsearch/skillsearch.component';
+import { JobprofileComponent } from './components/jobprofile/jobprofile.component';
+import { PerfanalysisComponent } from './components/perfanalysis/perfanalysis.component';
+import { TrainingsuggestionComponent } from './components/trainingsuggestion/trainingsuggestion.component';
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "", redirectTo: "/login", pathMatch: "full" },
   { path: "home", component: HomeComponent },
-  { path: "deployed-model", component: DeployedModelComponent },
-  { path: "chat-model", component: ConversationModelComponent },
-  { path: "aws-search", component: AwsSearchComponent}
+  { path: "skillsearch", component: SkillsearchComponent },
+  { path: "jobprofile", component: JobprofileComponent },
+  { path: "perfanalysis", component: PerfanalysisComponent},
+  { path: "trainingsuggestion", component: TrainingsuggestionComponent}
 ];
 
 @NgModule({

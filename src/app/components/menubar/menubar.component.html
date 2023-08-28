@@ -2,20 +2,21 @@
   routerLink="/home"  routerLinkActive="active"
   style="font-size: 16px; font-weight: bold;"
   >
-    <mat-icon>home</mat-icon>Accueil
+    <mat-icon>home</mat-icon>Home
 </button>
 
 <button mat-icon-button [matMenuTriggerFor]="menu" 
   #menuTrigger="matMenuTrigger" 
   (mouseover)="menuTrigger.openMenu()" color="warn"
   style="font-size: 16px; font-weight: bold;">
-  Expérimentation
+  Usecases/Sectors
 </button>
 <mat-menu #menu="matMenu" [overlapTrigger]="false">
 <span (mouseleave)="menuTrigger.closeMenu()">
-  <button mat-menu-item routerLink="/deployed-model">Querying deployed model (GCP)</button>
-  <button mat-menu-item routerLink="/chat-model">Bard (GCP)</button>
-  <button mat-menu-item routerLink="/aws-search">App builder - Semantic search (AWS)</button>
+  <button mat-menu-item routerLink="/skillsearch">Skill Search</button>
+  <button mat-menu-item routerLink="/jobprofile">Job Profile</button>
+  <button mat-menu-item routerLink="/perfanalysis">Performance Analysis</button>
+  <button mat-menu-item routerLink="/trainingsuggestion">Training / IDP Suggestion</button>
 </span>
 </mat-menu>
 

@@ -18,9 +18,8 @@ export class HomeComponent implements OnInit{
     this.userProfile = JSON.parse(sessionStorage.getItem("loggedInUser") || "");
   }
   
-  bardOpenState = false; 
-  promptOpenState = false;
-  appAwsAiSearchOpenState = false;
+  
+  hrOpenState = false;
   
   handleSignOut() {
     handleSignout();
