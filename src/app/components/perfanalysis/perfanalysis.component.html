@@ -1,1 +1,47 @@
-<p>perfanalysis works!</p>
+<menubar></menubar>
+<mat-toolbar>
+    <button mat-icon-button class="icon" aria-label="icon-button">
+        <mat-icon>analytics</mat-icon>
+    </button>
+    <span class="header-spacer">
+        HR / Resource Management - Performance Analysis
+    </span>
+</mat-toolbar>
+<mat-toolbar>
+    <button mat-icon-button class="icon" aria-label="icon-button">
+        <mat-icon>sticky_note_2</mat-icon>
+    </button>
+    <span style="word-wrap: normal; font-size: small;">
+        Generative AI will be able to quickly and efficiently analyze thousands of CVs in just a few seconds, identifying key skills, experience, and training relevant to each position. 
+    </span>
+</mat-toolbar>
+<table align="center" width="80%">
+    <tr>
+       <td>
+        <mat-stepper #stepper>
+            <mat-step [stepControl]="chatFormGroup">
+               <form [formGroup]="chatFormGroup">
+                 <ng-template matStepLabel>Your query ?</ng-template>
+                   <mat-form-field class="hr-form">
+                    <mat-label>Question</mat-label>
+                    <input matInput placeholder="Question ?" formControlName="questionCtl" style="width: 500px;" required>
+                   </mat-form-field>
+                   <button mat-icon-button matStepperNext class="icon" (click)="askQuestion()" aria-label="icon-button">
+                   <mat-icon>search</mat-icon>
+                </button>
+               </form>
+            </mat-step>
+            <mat-step>
+            
+                <div class="multiline-textfields">
+                    {{ val }}
+                </div>                
+            
+            <br><br>
+            <div>
+                <button mat-flat-button color="warn" matStepperPrevious>Back</button>&nbsp;
+                <button mat-flat-button color="warn" (click)="stepper.reset()">Reset</button>
+            </div>
+            </mat-step>
+        
+                

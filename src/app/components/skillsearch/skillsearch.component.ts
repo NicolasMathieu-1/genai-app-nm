@@ -21,7 +21,7 @@ export class SkillsearchComponent {
 
     askQuestion()
     {
-      const hostname : string = "localhost:8001"; // "localhost:8001"; 
+      const hostname : string = "localhost:8001";
       const question  = this.chatFormGroup.getRawValue()["questionCtl"]; 
       const url: string = `http://${hostname}/gcpgenaiapis/apis/competency/search/'${question}'`;
       console.log(url);
